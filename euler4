@@ -1,0 +1,25 @@
+#used python
+#!/bin/python3
+
+import sys
+def num(n):
+    for i in range(100,1000):
+        
+        if(n%i==0):
+            b=n//i
+            l=len(str(b))
+            if(3==l):
+                return(1)
+    return(0)
+
+
+t = int(input().strip())
+for a0 in range(t):
+    n = int(input().strip())
+    for i in range(n-1,99999,-1):
+        s=str(i)
+        if(s==s[::-1]):
+            if( num(i)==1):
+                print(i)
+                break
+
